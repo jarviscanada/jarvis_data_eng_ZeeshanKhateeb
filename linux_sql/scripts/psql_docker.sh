@@ -4,13 +4,16 @@
 # Validate argument count (at least 1 argument: create|start|stop)
 if [ "$#" -lt 1 ]; then
   echo "Illegal number of parameters"
-  echo "Usage: $0 create|start|stop [db_username] [db_password]"
+  echo "Usage: $0 create|start|stop [psql_host] [psql_port] [db_name] [psql_user] [psql_password]"
   exit 1
 fi
 
 cmd=$1
-db_username=$2
-db_password=$3
+psql_host=$2
+psql_port=$3
+db_name=$4
+psql_user=$5
+psql_password=$6
 
 container_name="jrvs-psql"
 volume_name="pgdata"
