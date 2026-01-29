@@ -28,11 +28,11 @@ docker container inspect $container_name >/dev/null 2>&1
 container_status=$?
 
 case $cmd in
-  create)
-    if [ $# -ne 3 ]; then
-      echo "Create requires db_username and db_password"
-      exit 1
-    fi
+create)
+  if [ $# -ne 6 ]; then
+    echo "Usage: $0 create psql_host psql_port db_name psql_user psql_password"
+    exit 1
+  fi
 
     if [ $container_status -eq 0 ]; then
       echo "Container already exists"
@@ -41,13 +41,15 @@ case $cmd in
 
     docker volume inspect $volume_name >/dev/null 2>&1 || docker volume create $volume_name
 
-    docker run --name $container_name \
-      -e POSTGRES_USER=$db_username \
-      -e POSTGRES_PASSWORD=$db_password \
-      -d \
-      -p $port:$port \
-      -v $volume_name:/var/lib/postgresql/data \
-      $image
+ docker run --name $container_name \
+  -e POSTGRES_USER=$psql_user \
+  -e POSTGRES_PASSWORD=$psql_password \
+  -e POSTGRES_DB=$db_name \
+  -e PGDATA=/var/lib/postgresql/data/pgdata \
+  -d \
+  -p $psql_port:5432 \
+  -v $volume_name:/var/lib/postgresql/data \
+  $image
 
     exit $?
     ;;

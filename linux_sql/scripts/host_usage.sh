@@ -17,8 +17,15 @@ fi
 timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
 # Get host_id
-host_id=$(PGPASSWORD=$psql_password psql -h $psql_host -p $psql_port -U $psql_user -d $db_name \
--c "SELECT id FROM host_info WHERE hostname='$(hostname -f)';" | sed -n 3p | xargs)
+hostname=$(hostname -f)
+host_id=$(PGPASSWORD=$psql_password psql \
+-h $psql_host \
+-p $psql_port \
+-U $psql_user \
+-d $db_name \
+-t -A \
+-c "SELECT id FROM host_info WHERE hostname='${hostname}'" \
+| xargs)
 
 # Collect memory usage (MB)
 memory_free=$(vmstat --unit M 1 2 | tail -1 | awk '{print $4}')
