@@ -214,3 +214,117 @@ FROM cd.members m
 ORDER BY
   m.firstname || ' ' || m.surname;
 
+
+-- Aggregation 
+
+-- Question 1: Count recommendations per member
+
+SELECT
+  recommendedby,
+  COUNT(*) AS count
+FROM cd.members
+WHERE recommendedby IS NOT NULL
+GROUP BY recommendedby
+ORDER BY recommendedby;
+
+-- Question 2: Total slots booked per facility
+
+SELECT
+  facid,
+  SUM(slots) AS "Total Slots"
+FROM
+  cd.bookings
+GROUP BY
+  facid
+ORDER BY
+  facid;
+
+-- Question 3: Total slots booked per facility in September 2012
+
+SELECT
+  facid,
+  SUM(slots) AS "Total Slots"
+FROM
+  cd.bookings
+WHERE
+  starttime >= '2012-09-01'
+  AND starttime < '2012-10-01'
+GROUP BY
+  facid
+ORDER BY
+  "Total Slots";
+
+-- Question 4: Total slots booked per facility per month in 2012
+
+SELECT
+  facid,
+  EXTRACT(MONTH FROM starttime) AS month,
+  SUM(slots) AS "Total Slots"
+FROM cd.bookings
+WHERE starttime >= '2012-01-01'
+  AND starttime < '2013-01-01'
+GROUP BY
+  facid,
+  month
+ORDER BY
+  facid,
+  month;
+
+-- Question 5: Count of members who have made at least one booking
+
+SELECT
+  COUNT(DISTINCT memid) AS count
+FROM
+  cd.bookings;
+
+-- Question 6: First booking per member after September 1st, 2012
+
+SELECT
+  m.surname,
+  m.firstname,
+  m.memid,
+  MIN(b.starttime) AS starttime
+FROM cd.members m
+JOIN cd.bookings b
+  ON m.memid = b.memid
+WHERE b.starttime >= '2012-09-01'
+GROUP BY
+  m.memid,
+  m.surname,
+  m.firstname
+ORDER BY
+  m.memid;
+
+-- Question 7: Total member count on each row
+
+SELECT
+  COUNT(*) OVER () AS count,
+  firstname,
+  surname
+FROM cd.members
+ORDER BY joindate;
+
+-- Question 8: Numbered list of members by join date
+
+SELECT
+  ROW_NUMBER() OVER (ORDER BY joindate) AS row_number,
+  firstname,
+  surname
+FROM cd.members
+ORDER BY joindate;
+
+-- Question 9: Facility with the highest number of slots booked (including ties)
+
+SELECT
+  facid,
+  SUM(slots) AS total
+FROM cd.bookings
+GROUP BY facid
+HAVING SUM(slots) = (
+  SELECT MAX(total_slots)
+  FROM (
+    SELECT SUM(slots) AS total_slots
+    FROM cd.bookings
+    GROUP BY facid
+  ) sub
+);
