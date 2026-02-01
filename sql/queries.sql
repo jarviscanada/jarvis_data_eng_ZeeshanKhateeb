@@ -66,3 +66,9 @@ DELETE FROM
   cd.bookings;
 
 
+-- Question 6: Delete a member with no bookings
+
+DELETE FROM
+  cd.members
+WHERE
+  memid = 37;

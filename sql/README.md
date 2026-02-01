@@ -96,3 +96,16 @@ Explanation:
 Removed all records from the cd.bookings table as part of a database clearout.
 
 
+###### Delete a member from the cd.members table
+
+```sql
+DELETE FROM 
+  cd.members 
+WHERE 
+  memid = 37;
+```
+
+Explanation:
+Deleted member 37 from the cd.members table since they had no associated bookings.
+
+
