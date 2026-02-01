@@ -1,3 +1,5 @@
+---Modifying Data
+
 -- Question 1: Insert some data into a table (Spa)
 
 INSERT INTO cd.facilities (
@@ -73,7 +75,7 @@ DELETE FROM
 WHERE
   memid = 37;
 
--- Basics:
+-- Basics
 
 --Question 1 : Control which rows are retrieved 
 
@@ -328,3 +330,33 @@ HAVING SUM(slots) = (
     GROUP BY facid
   ) sub
 );
+
+
+--- Strings
+
+--Question 1: Format the names of members
+
+SELECT
+  surname || ', ' || firstname AS name
+FROM cd.members
+ORDER BY surname, firstname;
+
+-- Question 2: Find telephone numbers with parentheses
+
+SELECT
+  memid,
+  telephone
+FROM cd.members
+WHERE telephone LIKE '%(%'
+ORDER BY memid;
+
+--Question 3: Count members by starting letter of surname
+
+SELECT
+  LEFT(surname, 1) AS letter,
+  COUNT(*) AS count
+FROM cd.members
+GROUP BY
+  LEFT(surname, 1)
+ORDER BY
+  letter;

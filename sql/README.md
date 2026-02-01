@@ -2,6 +2,8 @@
 
 # SQL Queries
 
+###### Modifying Data ######
+
 ###### Insert some data into a table
 
 ```sql
@@ -109,7 +111,7 @@ Explanation:
 Deleted member 37 from the cd.members table since they had no associated bookings.
 
 
-###### Basics 
+###### Basics ######
 
 ###### Control which rows are retrieved 
 
@@ -204,7 +206,7 @@ FROM
 Explanation:
 Combines member surnames and facility names into a single result set.
 
-###### Joins 
+###### Joins ######
 
 ###### Retrieve the start times of members' bookings
 
@@ -298,7 +300,7 @@ Explanation:
 Lists each member with their recommender using a correlated subquery (no JOINs), ordered by member name.
 
 
-###### Aggregation 
+###### Aggregation ######
 
 ###### Count recommendations per member
 
@@ -452,3 +454,47 @@ HAVING SUM(slots) = (
 Explanation:
 
 Finds the facility (or facilities) with the maximum total slots booked using aggregation and a subquery.
+
+
+###### Strings ######
+
+###### Format the names of members
+
+```sql
+SELECT
+  surname || ', ' || firstname AS name
+FROM cd.members
+ORDER BY surname, firstname;
+```
+Explanation:
+Formats member names as Surname, Firstname using string concatenation and orders them alphabetically.
+
+###### Find telephone numbers with parentheses
+
+```sql
+SELECT
+  memid,
+  telephone
+FROM cd.members
+WHERE telephone LIKE '%(%'
+ORDER BY memid;
+```
+Explanation:
+Finds members whose telephone numbers contain parentheses using pattern matching.
+
+###### Count members by surname initial
+
+```sql
+SELECT
+  LEFT(surname, 1) AS letter,
+  COUNT(*) AS count
+FROM cd.members
+GROUP BY
+  LEFT(surname, 1)
+ORDER BY
+  letter;
+```
+
+Explanation:
+
+Counts how many members have surnames starting with each letter of the alphabet.
