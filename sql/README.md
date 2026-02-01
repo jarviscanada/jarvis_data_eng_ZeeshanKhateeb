@@ -203,3 +203,96 @@ FROM
 
 Explanation:
 Combines member surnames and facility names into a single result set.
+
+###### Joins 
+
+###### Retrieve the start times of members' bookings
+
+```sql
+SELECT
+  b.starttime
+FROM cd.bookings b
+JOIN cd.members m
+  ON b.memid = m.memid
+WHERE m.firstname = 'David'
+  AND m.surname = 'Farrell';
+```
+
+Explanation:
+Retrieves booking start times for the member named David Farrell using a join between members and bookings.
+
+
+###### Work out the start times of bookings for tennis courts
+
+```sql
+SELECT
+  b.starttime AS start,
+  f.name
+FROM cd.bookings b
+JOIN cd.facilities f
+  ON b.facid = f.facid
+WHERE f.name LIKE 'Tennis Court%'
+  AND DATE(b.starttime) = '2012-09-21'
+ORDER BY b.starttime;
+```
+Explanation:
+Retrieves start times and facility names for tennis court bookings on 21 September 2012, ordered by time.
+
+
+###### Produce a list of all members, along with their recommender
+
+```sql
+SELECT
+  m.firstname AS memfname,
+  m.surname AS memsname,
+  r.firstname AS recfname,
+  r.surname AS recsname
+FROM
+  cd.members m
+  LEFT JOIN cd.members r
+  ON m.recommendedby = r.memid
+ORDER BY
+  m.surname,
+  m.firstname;
+```
+
+Explanation:
+Lists all members and the members who recommended them, if any, using a self join.
+
+
+###### Produce a list of all members who have recommended another member
+
+```sql
+SELECT DISTINCT
+  r.firstname,
+  r.surname
+FROM
+  cd.members m
+JOIN cd.members r
+  ON m.recommendedby = r.memid
+ORDER BY
+  r.surname, 
+  r.firstname;
+```
+
+Explanation:
+Lists members who appear as recommenders for other members, ensuring no duplicates.
+
+
+###### Produce a list of all members, along with their recommender, using no joins
+
+```sql
+SELECT DISTINCT
+  m.firstname || ' ' || m.surname AS member,
+  (
+    SELECT r.firstname || ' ' || r.surname
+    FROM cd.members r
+    WHERE r.memid = m.recommendedby
+  ) AS recommender
+FROM cd.members m
+ORDER BY
+  m.firstname || ' ' || m.surname;
+```
+
+Explanation:
+Lists each member with their recommender using a correlated subquery (no JOINs), ordered by member name.
