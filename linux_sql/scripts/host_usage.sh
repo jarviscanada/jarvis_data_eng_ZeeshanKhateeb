@@ -16,17 +16,6 @@ fi
 # Collect system usage data
 timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
-# Get host_id
-hostname=$(hostname -f)
-host_id=$(PGPASSWORD=$psql_password psql \
--h $psql_host \
--p $psql_port \
--U $psql_user \
--d $db_name \
--t -A \
--c "SELECT id FROM host_info WHERE hostname='${hostname}'" \
-| xargs)
-
 # Collect memory usage (MB)
 memory_free=$(vmstat --unit M 1 2 | tail -1 | awk '{print $4}')
 
@@ -41,9 +30,20 @@ disk_io=$(vmstat -d 1 2 | tail -1 | awk '{print $10}')
 disk_available=$(df -BM / | tail -1 | awk '{print $4}' | sed 's/M//')
 
 # Construct INSERT statement
-insert_stmt="INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available)
-VALUES('$timestamp', $host_id, $memory_free, $cpu_idle, $cpu_kernel, $disk_io, $disk_available);"
+hostname=$(hostname -f)
 
+insert_stmt="
+INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available)
+VALUES (
+'$timestamp',
+(SELECT id FROM host_info WHERE hostname='${hostname}'),
+$memory_free,
+$cpu_idle,
+$cpu_kernel,
+$disk_io,
+$disk_available
+);
+"
 # Execute INSERT
 PGPASSWORD=$psql_password psql -h $psql_host -p $psql_port -U $psql_user -d $db_name -c "$insert_stmt"
 
