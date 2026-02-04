@@ -1,0 +1,121 @@
+{
+  "education": [
+    {
+      "awards_achievements": [],
+      "degree": "Postgraduate Certificate",
+      "department": "Business Insights and Analytics",
+      "duration": "Sep 2022 - Apr 2024",
+      "school_name": "Humber College (Lakeshore)"
+    },
+    {
+      "awards_achievements": [],
+      "degree": "Master of Engineering (M.Eng) in Micro-electronics and Control Systems",
+      "department": "Department of Electronics and Communication Engineering",
+      "duration": "Jun 2016 - Jun 2018",
+      "school_name": "Visvesvaraya Technological University"
+    },
+    {
+      "awards_achievements": [],
+      "degree": "Bachelor of Engineering (B.Eng) in Electronics and Communication",
+      "department": "Electronics and Communication Engineering",
+      "duration": "Jun 2010 - Jun 2014",
+      "school_name": "Visvesvaraya Technological University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/zeeshankhateeb/jarvis_data_eng_ZeeshanKhateeb",
+  "highlighted_projects": [
+    {
+      "description": "Analyzed mortgage customer data using regression analysis and principal component analysis to identify key loan risk factors, improving risk assessment and accuracy.",
+      "name": "Loan Risk Analysis Using Regression and PCA"
+    },
+    {
+      "description": "Used SQL queries, joins, and analytical techniques to identify attrition drivers for a mortgage lender and recommended process improvements.",
+      "name": "Customer Attrition Analysis for Mortgage Lender"
+    },
+    {
+      "description": "Designed and implemented an ARIMA-based inventory forecasting system for five Tim Hortons locations as a capstone project, improving inventory planning.",
+      "name": "Inventory Forecasting System for Tim Hortons"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Developed a Linux-based cluster monitoring agent to collect, store, and analyze system resource usage metrics such as CPU, memory, and disk utilization. Implemented Bash scripts to automate data collection and scheduling using cron jobs, and stored metrics in a PostgreSQL database for querying and analysis. This project demonstrates proficiency in Linux, Bash scripting, Docker, PostgreSQL, and system-level monitoring in a production-like environment.",
+      "git_url": "/linux_sql",
+      "name": "Linux Cluster Monitoring Agent"
+    },
+    {
+      "description": "Designed and implemented a relational database solution using PostgreSQL to support business data analysis and reporting requirements. Created database schemas, tables, and constraints, and wrote complex SQL queries involving joins, subqueries, aggregate functions, and window functions to extract actionable insights. This project reflects a Business Systems Analyst approach by translating business requirements into structured data models and analytical queries.",
+      "git_url": "/linux_sql",
+      "name": "RDBMS and SQL Data Analysis Project"
+    }
+  ],
+  "name": "Zeeshan Khateeb",
+  "others": [
+    {
+      "bullets": [
+        "ECBA  Entry Certificate in Business Analysis (IIBA), Aug 2024",
+        "Certified Prosafe RS Engineer (PLC  Yokogawa), Mar 2015"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Best Paper Award in an International Conference"
+      ],
+      "title": "Awards"
+    },
+    {
+      "bullets": [
+        "Graphology",
+        "Palmistry"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis Consulting Group",
+      "description": "Analyzed business and technical requirements and translated them into structured data models, SQL queries, and analytical solutions as part of enterprise-style consulting projects. Collaborated on system design, database implementation, and data validation activities while supporting monitoring, reporting, and decision-making use cases using PostgreSQL, SQL, Linux, and analytical workflows.",
+      "duration": "Jan 2026-present",
+      "title": "Business Systems Analyst"
+    },
+    {
+      "company": "AtliQ Technologies Pvt. Ltd.",
+      "description": "Analyzed business data, built dashboards, and automated reports while collaborating with cross- functional teams to deliver actionable insights that improved decision-making and supported strategic objectives.",
+      "duration": "Jan 2024 - May 2024",
+      "title": "Data Analyst Intern"
+    },
+    {
+      "company": "Mind Flow Design",
+      "description": "Led digital image processing initiatives for a leading camera brand by analyzing and enhancing raw sensor image data using OpenCV, MATLAB, and Visual Studio to improve overall image quality.",
+      "duration": "Jul 2018 - May 2022",
+      "title": "Embedded Software Engineer"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "R",
+      "Excel (Pivot Tables, Power Query, VBA)",
+      "Tableau",
+      "Statistical Analysis",
+      "ETL"
+    ],
+    "familiar": [
+      "SAS",
+      "SPSS",
+      "Natural Language Processing",
+      "Random Forest",
+      "Data Modeling"
+    ],
+    "proficient": [
+      "Python",
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git",
+      "SQL",
+      "Power BI"
+    ]
+  },
+  "summary": "Business Systems Analytics professional with over four years of experience in data analysis, software engineering, and applied analytics across technology and consulting environments. Skilled in Python, SQL, Power BI, and statistical analysis, with hands-on experience delivering dashboards, automated reports, and data-driven insights to support strategic decision-making. Holds a postgraduate certificate in Business Insights and Analytics and has worked on real-world projects involving risk analysis, customer attrition, and inventory forecasting."
+}

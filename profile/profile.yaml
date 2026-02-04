@@ -1,0 +1,136 @@
+# Preferred name (Characters only)
+name: "Zeeshan Khateeb"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/zeeshankhateeb/jarvis_data_eng_ZeeshanKhateeb
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: 
+  Business Systems Analytics professional with over four years of experience in data analysis,
+  software engineering, and applied analytics across technology and consulting environments. Skilled in
+  Python, SQL, Power BI, and statistical analysis, with hands-on experience delivering dashboards,
+  automated reports, and data-driven insights to support strategic decision-making. Holds a postgraduate
+  certificate in Business Insights and Analytics and has worked on real-world projects involving risk
+  analysis, customer attrition, and inventory forecasting.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Python
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+    - SQL
+    - Power BI
+  # At least 5 skills
+  competent:
+    - R
+    - Excel (Pivot Tables, Power Query, VBA)
+    - Tableau
+    - Statistical Analysis
+    - ETL
+  # At least 5 skills
+  familiar:
+    - SAS
+    - SPSS
+    - Natural Language Processing
+    - Random Forest
+    - Data Modeling
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Linux Cluster Monitoring Agent"
+    git_url: "/linux_sql"
+    description: Developed a Linux-based cluster monitoring agent to collect, store, and analyze
+      system resource usage metrics such as CPU, memory, and disk utilization. Implemented
+      Bash scripts to automate data collection and scheduling using cron jobs, and stored
+      metrics in a PostgreSQL database for querying and analysis. This project demonstrates
+      proficiency in Linux, Bash scripting, Docker, PostgreSQL, and system-level monitoring
+      in a production-like environment.
+  - name: "RDBMS and SQL Data Analysis Project"
+    git_url: "/linux_sql"
+    description: Designed and implemented a relational database solution using PostgreSQL to support
+      business data analysis and reporting requirements. Created database schemas, tables,
+      and constraints, and wrote complex SQL queries involving joins, subqueries, aggregate
+      functions, and window functions to extract actionable insights. This project reflects
+      a Business Systems Analyst approach by translating business requirements into
+      structured data models and analytical queries.
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Loan Risk Analysis Using Regression and PCA"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Analyzed mortgage customer data using regression analysis and principal component analysis to
+      identify key loan risk factors, improving risk assessment and accuracy.
+
+  - name: "Customer Attrition Analysis for Mortgage Lender"    
+    description: Used SQL queries, joins, and analytical techniques to identify attrition drivers for a mortgage
+      lender and recommended process improvements.
+
+  - name: "Inventory Forecasting System for Tim Hortons"
+    description: Designed and implemented an ARIMA-based inventory forecasting system for five Tim Hortons locations
+      as a capstone project, improving inventory planning.
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Business Systems Analyst"
+    company: "Jarvis Consulting Group"
+    duration: "Jan 2026-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Analyzed business and technical requirements and translated them into structured
+      data models, SQL queries, and analytical solutions as part of enterprise-style
+      consulting projects. Collaborated on system design, database implementation,
+      and data validation activities while supporting monitoring, reporting, and
+      decision-making use cases using PostgreSQL, SQL, Linux, and analytical workflows."
+  - title: "Data Analyst Intern"
+    company: "AtliQ Technologies Pvt. Ltd."
+    duration: "Jan 2024 - May 2024"
+    description: "Analyzed business data, built dashboards, and automated reports while collaborating with cross-
+      functional teams to deliver actionable insights that improved decision-making and supported
+      strategic objectives."
+  - title: "Embedded Software Engineer"
+    company: "Mind Flow Design"
+    duration: "Jul 2018 - May 2022"
+    description: 
+      Led digital image processing initiatives for a leading camera brand by analyzing and enhancing
+      raw sensor image data using OpenCV, MATLAB, and Visual Studio to improve overall image quality.
+
+#List of edcuation
+education: 
+  - school_name: "Humber College (Lakeshore)"
+    duration: "Sep 2022 - Apr 2024"
+    degree: "Postgraduate Certificate"
+    department: "Business Insights and Analytics"
+    awards_achievements: []
+  - school_name: "Visvesvaraya Technological University"
+    duration: "Jun 2016 - Jun 2018"
+    degree: "Master of Engineering (M.Eng) in Micro-electronics and Control Systems"
+    department: "Department of Electronics and Communication Engineering"
+    awards_achievements: []
+  - school_name: "Visvesvaraya Technological University"
+    duration: "Jun 2010 - Jun 2014"
+    degree: "Bachelor of Engineering (B.Eng) in Electronics and Communication"
+    department: "Electronics and Communication Engineering"
+    awards_achievements: []
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #list of items
+    bullets:
+      - "ECBA  Entry Certificate in Business Analysis (IIBA), Aug 2024"
+      - "Certified Prosafe RS Engineer (PLC  Yokogawa), Mar 2015"
+  - title: "Awards"
+    bullets:
+      - "Best Paper Award in an International Conference"
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Graphology"
+      - "Palmistry"
