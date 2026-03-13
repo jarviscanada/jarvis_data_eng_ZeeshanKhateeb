@@ -1,0 +1,17 @@
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Jupyter local configs
+.local/
+.jupyter/
+
+# NPM cache
+.npm/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
