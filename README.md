@@ -1,14 +1,14 @@
 # Zeeshan Khateeb . Jarvis Consulting
 
-Business Systems Analytics professional with over four years of experience in data analysis, software engineering, and applied analytics across technology and consulting environments. Skilled in Python, SQL, Power BI, and statistical analysis, with hands-on experience delivering dashboards, automated reports, and data-driven insights to support strategic decision-making. Holds a postgraduate certificate in Business Insights and Analytics and has worked on real-world projects involving risk analysis, customer attrition, and inventory forecasting.
+Business Systems Analyst with strong data analytics and technical problem-solving skills, experienced in translating business requirements into data-driven solutions. Skilled in SQL, Python, and relational databases to analyze data, validate system outputs, and support business decision-making. Experienced in designing business requirements documentation, performing data analysis, and supporting end-to-end system implementations. Hands-on experience with Linux, Docker, and database monitoring through real-world technical projects, combining business understanding with technical execution to deliver practical and scalable solutions.
 
 ## Skills
 
-**Proficient:** Python, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git, SQL, Power BI
+**Proficient:** Business Systems Analysis, RDBMS/SQL, PostgreSQL, Python, Linux/Bash, Data Analysis, Agile/Scrum, Git, Requirements Documentation (BRD, SRD), Power BI, DAX Functions, Docker, ETL/Data Pipelines, Google Cloud
 
-**Competent:** R, Excel (Pivot Tables, Power Query, VBA), Tableau, Statistical Analysis, ETL
+**Competent:** R, Excel (Pivot Tables, Power Query, VBA), Tableau, Data Visualization, Data Analysis, Data Modelling, Process Mapping, Statistical Analysis, ETL, Spark and Hadoop
 
-**Familiar:** SAS, SPSS, Natural Language Processing, Random Forest, Data Modeling
+**Familiar:** Stakeholder Communication, Reporting Automation, REST API's, System Monitoring, Natural Language Processing, Random Forest, Microsoft Azure and Azure DevOps, Amazon AWS, CI/CD, Kubernetes, Terraform/Ansible, Kafka, MongoDB/NoSQL, React/Angular, Machine Learning Basics
 
 ## Jarvis Projects
 
