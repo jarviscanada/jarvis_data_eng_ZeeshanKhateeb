@@ -51,13 +51,30 @@ jarvis_projects:
       proficiency in Linux, Bash scripting, Docker, PostgreSQL, and system-level monitoring
       in a production-like environment.
   - name: "RDBMS and SQL Data Analysis Project"
-    git_url: "/linux_sql"
+    git_url: "/sql"
     description: Designed and implemented a relational database solution using PostgreSQL to support
       business data analysis and reporting requirements. Created database schemas, tables,
       and constraints, and wrote complex SQL queries involving joins, subqueries, aggregate
       functions, and window functions to extract actionable insights. This project reflects
       a Business Systems Analyst approach by translating business requirements into
       structured data models and analytical queries.
+  - name: "Python Data Analytics for an E-commerce Retailer"
+    git_url: "/python_data_wrangling"
+    description: Analyzed retail transaction data using Python (Pandas, NumPy, Matplotlib) to identify
+      sales trends and customer purchasing behavior. Cleaned and transformed raw data, performed exploratory analysis, 
+      and applied RFM segmentation to identify high-value customer groups and seasonal sales patterns to support data-driven business decisions.
+  - name: "Business Requirements Document  Linux Cluster Monitoring Agent"
+    git_url: "/bsa"
+    description: Conducted business analysis to define requirements for a Linux-based monitoring solution that automates the collection
+      of hardware and resource usage metrics across cluster nodes. Identified the business problem, defined project scope and stakeholder needs, 
+      and documented functional and non-functional requirements.
+  - name: "Software Requirements Document  Retail Stock Trading Application"
+    git_url: "/bsa"
+    description: Gathered and analyzed stakeholder requirements for a retail stock trading application designed for independent investors.
+      Defined system features including stock search, portfolio tracking, and buy/sell workflows, and documented system architecture,
+      functional requirements, and scalability considerations.
+
+ 
 
 # List of personal or academic projects
 # Feel free to add more projects
